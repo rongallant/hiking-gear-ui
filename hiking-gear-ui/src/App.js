@@ -1,19 +1,56 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {Button, Form, FormFeedback, Input, Label, FormGroup} from 'reactstrap';
+
+import PanelDefault from './components/panels/panelDefault';
+import AppHeader from './components/panels/appHeader'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <div>
+        <AppHeader/>
+        <div className="container">
+        <Form method="post">
+            <PanelDefault headerText="Add Gear">
+              <FormGroup>
+                <Label>Category</Label>
+                <Input type="select" name="category" required>
+                  <option></option>
+                  <option>Gear</option>
+                  <option>Food</option>
+                  <option>Water</option>
+                </Input>
+                <FormFeedback>Required.</FormFeedback>
+              </FormGroup>
+              <FormGroup>
+                <Label>Name</Label>
+                <Input name="name" required />
+              </FormGroup>
+              <FormGroup>
+                <Label>Description</Label>
+                <Input name="description" type="textarea" required />
+              </FormGroup>
+              <FormGroup>
+                <Label>Weight (g)</Label>
+                <Input name="weightGrams" type="number" />
+              </FormGroup>
+              <FormGroup>
+                <Label>Rating</Label>
+                <Input type="select" name="rating">
+                  <option></option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  </Input>
+              </FormGroup>
+              <Button type="submit" color="primary">Add Gear</Button>
+            </PanelDefault>
+          </Form>
+        </div>
+    </div>
     );
   }
 }

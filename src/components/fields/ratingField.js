@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormFeedback, Input, Label, FormGroup } from 'reactstrap';
+import { Input } from 'reactstrap';
 import FieldWrapper from './fieldWrapper';
 
 export default class RatingField extends Component {
@@ -7,7 +7,7 @@ export default class RatingField extends Component {
 		return (
 			<FieldWrapper label="Rating">
 				<Input type="select" name="rating">
-					<option />
+					<option value=""></option>
 					<option>1</option>
 					<option>2</option>
 					<option>3</option>

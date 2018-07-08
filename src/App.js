@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button, FormFeedback, Input, Label, Form, FormGroup } from 'reactstrap';
 
 import AppHeader from './components/panels/appHeader';
 import GearForm from './components/forms/gearForm';
@@ -10,7 +9,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div>
+			<div id="hikingGearApp">
 				<AppHeader/>
 				<div className="container">
 					<GearForm/>

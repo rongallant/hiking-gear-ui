@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormFeedback, Input, Label, Form, FormGroup } from 'reactstrap';
+import { Input } from 'reactstrap';
 import FieldWrapper from './fieldWrapper';
 
 export default class CategoryField extends Component {

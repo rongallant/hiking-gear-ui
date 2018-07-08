@@ -18,20 +18,11 @@ export default class GearForm extends Component {
 		this.formHandler = this.formHandler.bind(this);
 	}
 
-	inputChangeHandler(e) {
-		let formFields = { ...this.state.formFields };
-		formFields[e.target.name] = e.target.value;
-		this.setState({
-			formFields
-		});
-	}
-
 	formHandler(e) {
 		e.preventDefault();
 		console.log('formHandler', e.target);
 	}
 
-	
 	render() {
 		return (
 			<Form onSubmit={(e) => this.formHandler(e)}>
